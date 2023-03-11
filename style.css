@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background-color: #A7C3B7;
+}
+
+.container {
+  width: 50%;
+  margin: 1em auto;
+  margin-bottom: 6em;
+  min-height: 101vh;
+}
+
+.container:hover .fa-plus {
+  color: #E65E6A;
+}
+
+.container:hover h3 {
+  color: #E65E6A;
+}
+
+h1 {
+  line-height: 2em;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+h3 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  transition: color 0.3s;
+}
+
+.fa-plus {
+  color: transparent;
+  font-size: 1.4em;
+  transition: all 0.3s;
+}
+
+.meme {
+  background-color: rgba(248, 242, 216, 0.1);
+  display: block;
+  width: 100%;
+  border-top: 1px solid #93A243;
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.meme:hover {
+  cursor: pointer;
+}
+
+.meme:hover .fa-plus {
+  transform: rotate(45deg);
+}
+
+input {
+  appearance: none;
+}
+
+input:checked ~ .img__container {
+  height: auto;
+  opacity: 1;
+}
+
+input:hover ~ .img__container {
+  height: auto;
+  opacity: 1;
+} 
+
+input:checked ~ .title h3 {
+  color: #E65E6A;
+}
+
+input:checked ~ .title .fa-plus {
+  transform: rotate(45deg);
+}
+
+.img__container {
+  overflow: visible;
+  width: 35%;
+  height: 0;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+img {
+  width: 100%;
+  border: 0.2em solid transparent;
+}
+
+img:hover {
+  border: 0.2em solid #E65E6A;
+}
+
+img:active {
+  border: 0.2em solid #E65E6A;
+  box-shadow: 0 0 2em #E65E6A;
+}
